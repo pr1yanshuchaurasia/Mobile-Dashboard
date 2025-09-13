@@ -7,7 +7,7 @@ export default function CreateInvoice({ onAddInvoice }) {
     client: "",
     amount: "",
     date: "",
-    status: "Unpaid", // default
+    status: "Unpaid", 
   });
 
   const handleChange = (e) => {
@@ -39,7 +39,7 @@ export default function CreateInvoice({ onAddInvoice }) {
       className="text-center p-4 rounded-4 my-3 shadow-sm"
       style={{
         backgroundColor: "#f5f5f5",
-        fontFamily: "'Poppins', sans-serif",
+        fontFamily: "'Roboto', sans-serif",
       }}
     >
       {/* Circle with + icon */}
@@ -53,7 +53,7 @@ export default function CreateInvoice({ onAddInvoice }) {
           background: "white",
           border: "5px solid transparent",
           backgroundImage:
-            "linear-gradient(white, white), linear-gradient(90deg, rgb(138, 43, 226), rgb(186, 85, 211))",
+            "linear-gradient(white, white),  linear-gradient(90deg, #DD2A7B, #9747FF, #334CCA)",
           backgroundOrigin: "border-box",
           backgroundClip: "content-box, border-box",
           color: "rgb(138, 43, 226)",
@@ -74,6 +74,7 @@ export default function CreateInvoice({ onAddInvoice }) {
           WebkitTextFillColor: "transparent",
           fontSize: "26px",
           letterSpacing: "0.5px",
+          fontFamily: "'Roboto', sans-serif",
         }}
       >
         Create New Invoice
