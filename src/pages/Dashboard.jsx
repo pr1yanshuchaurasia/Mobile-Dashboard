@@ -23,31 +23,31 @@ export default function Dashboard() {
       const defaultInvoices = [
         {
           client: "Client A",
-          amount: "$2000",
+          amount: "2000",
           date: "2025-09-10",
           status: "Paid",
         },
         {
           client: "Client B",
-          amount: "$1500",
+          amount: "1500",
           date: "2025-09-11",
           status: "Overdue",
         },
         {
           client: "Client C",
-          amount: "$1000",
+          amount: "1000",
           date: "2025-09-12",
           status: "Unpaid",
         },
         {
           client: "Client D",
-          amount: "$500",
+          amount: "500",
           date: "2025-09-13",
           status: "Partially Paid",
         },
         {
           client: "Client E",
-          amount: "$800",
+          amount: "800",
           date: "2025-09-14",
           status: "Draft",
         },

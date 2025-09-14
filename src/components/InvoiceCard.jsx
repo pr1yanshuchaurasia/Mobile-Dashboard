@@ -34,7 +34,7 @@ export default function InvoiceCard({ client, amount, date, status }) {
             color: "gray",
           }}
         >
-          <span>{amount}</span>
+          <span>₹{amount}</span>
           <span>Due : {date}</span>
         </div>
       </div>

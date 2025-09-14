@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
