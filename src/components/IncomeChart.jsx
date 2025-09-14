@@ -3,22 +3,26 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
+  BarController,
   BarElement,
-  PointElement,
+  LineController,
   LineElement,
+  PointElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
 
-// Register necessary chart components
+// Register Chart.js controllers and elements
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  BarController,
   BarElement,
-  PointElement,
+  LineController,
   LineElement,
+  PointElement,
   Title,
   Tooltip,
   Legend
@@ -32,7 +36,7 @@ export default function IncomeChart() {
         type: "bar",
         label: "Income",
         data: [4000, 5000, 7000, 2500, 4800, 0],
-        backgroundColor: "rgba(138,43,226,0.8)", // purple bars
+        backgroundColor: "rgba(138,43,226,0.8)",
         borderRadius: 5,
         yAxisID: "y",
       },
@@ -40,7 +44,7 @@ export default function IncomeChart() {
         type: "line",
         label: "MoM Growth",
         data: [20, 40, 45, -30, 60, -100],
-        borderColor: "#8B0000", // dark brown line
+        borderColor: "#8B0000",
         backgroundColor: "#8B0000",
         borderWidth: 2,
         pointRadius: 4,
@@ -127,7 +131,6 @@ export default function IncomeChart() {
       >
         Your monthly income and growth for the last 6 <br /> months.
       </p>
-      {/* Responsive chart container */}
       <div style={{ width: "100%", height: "380px" }}>
         <Chart data={data} options={options} />
       </div>
