@@ -12,6 +12,7 @@ import {
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
 
+// Register necessary chart components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -29,7 +30,7 @@ export default function IncomeChart() {
     datasets: [
       {
         type: "bar",
-        label: "income",
+        label: "Income",
         data: [4000, 5000, 7000, 2500, 4800, 0],
         backgroundColor: "rgba(138,43,226,0.8)", // purple bars
         borderRadius: 5,
@@ -37,7 +38,7 @@ export default function IncomeChart() {
       },
       {
         type: "line",
-        label: "momGrowth",
+        label: "MoM Growth",
         data: [20, 40, 45, -30, 60, -100],
         borderColor: "#8B0000", // dark brown line
         backgroundColor: "#8B0000",
@@ -52,7 +53,7 @@ export default function IncomeChart() {
   };
 
   const options = {
-    maintainAspectRatio: false, // allow custom height
+    maintainAspectRatio: false,
     responsive: true,
     interaction: {
       mode: "index",
@@ -102,13 +103,13 @@ export default function IncomeChart() {
       style={{
         border: "1px solid transparent",
         fontFamily: "Roboto, sans-serif",
-        width: "100%", // responsive width
-        maxWidth: "100%", // prevent overflow
+        width: "100%",
+        maxWidth: "100%",
       }}
     >
       <h6
         style={{
-          fontWeight: 800, // medium/bold
+          fontWeight: 800,
           color: "gray",
           fontFamily: "Roboto, sans-serif",
           marginBottom: "15px",
@@ -128,7 +129,7 @@ export default function IncomeChart() {
       </p>
       {/* Responsive chart container */}
       <div style={{ width: "100%", height: "380px" }}>
-        <Chart type="bar" data={data} options={options} />
+        <Chart data={data} options={options} />
       </div>
     </div>
   );
